@@ -13,7 +13,7 @@
 
 ## Installation
 
-- `git clone git@github.com:hex-digital/new-portal`
+- `git clone git@github.com:Jamiewarb/laravel-vue-spa-inuitcss`
 - `cd new-portal`
 - `cp .env.example .env`
 - `composer install`
