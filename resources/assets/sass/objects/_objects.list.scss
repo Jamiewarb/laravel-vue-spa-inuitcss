@@ -1,0 +1,49 @@
+/* ==========================================================================
+   #LIST
+   ========================================================================== */
+
+/**
+ * .o-list
+ *        --bare      - Strip bullets and indentation from list
+ *        --inline    - Display all list items inline
+ *        --delimited - Separate list items with a character, default comma
+ *   __item - Each list item in the list
+ */
+
+/**
+ * Change the delimiter by predefining this variable in the global.settings file
+ */
+$inuit-list-inline-delimiter:   ",\00A0" !default;
+
+.o-list {
+    &--bare {
+        /* Strip list-like appearance from lists by removing their bullets, and
+         * any indentation. */
+        list-style: none;
+        margin-left: 0;
+    }
+    &--inline {
+        /* The list-inline object simply displays a list of items in one line. */
+        margin-left: 0;
+        list-style: none;
+        .o-list__item {
+            display: inline-block;
+        }
+    }
+
+    &--delimited {
+        font-size: 0;
+        &.o-list--inline {
+            > .o-list__item {
+                // 1. Fallback for old IEs not supporting `rem` values.
+                font-size: $inuit-global-font-size; /* [1] */
+                font-size: 1rem;
+            }
+            > .o-list__item + .o-list__item {
+                &:before {
+                    content: "#{$inuit-list-inline-delimiter}";
+                }
+            }
+        }
+    }
+}

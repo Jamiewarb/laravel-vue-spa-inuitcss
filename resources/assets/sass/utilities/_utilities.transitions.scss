@@ -1,0 +1,17 @@
+.u-page-enter-active,
+.u-page-leave-active {
+  transition: opacity .2s;
+}
+.u-page-enter,
+.u-page-leave-to {
+  opacity: 0;
+}
+
+.u-fade-enter-active,
+.u-fade-leave-active {
+  transition: opacity .15s
+}
+.u-fade-enter,
+.u-fade-leave-to {
+  opacity: 0
+}

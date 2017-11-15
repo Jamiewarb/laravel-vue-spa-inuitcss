@@ -1,0 +1,27 @@
+/**
+ * Monotone
+ */
+$color-white: #fff;
+$color-grey-dark: #191919;
+$color-black: #000;
+
+/**
+ * Base Palette
+ */
+$color-green: #01e3bd;
+$color-red: #ff605c;
+
+/**
+ * Theme Colours
+ */
+
+// Theme Base
+$color-primary: $color-green;
+
+// Theme Text
+$color-text-light: $color-white;
+$color-text-dark: $color-black;
+
+// Theme Result
+$color-success: $color-green;
+$color-error: $color-red;
