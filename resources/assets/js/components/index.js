@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import Icon from './Icon'
-import Card from './Card'
-import Child from './Child'
-import Button from './Button'
-import Checkbox from './Checkbox'
+import Icon from './image/Icon'
+import Card from './container/Card'
+import Child from './page/Child'
+import Button from './form/Button'
+import Checkbox from './form/Checkbox'
 import { HasError, AlertError, AlertSuccess } from 'vform'
 
 Vue.component(Icon.name, Icon)

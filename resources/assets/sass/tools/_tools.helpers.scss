@@ -1,0 +1,13 @@
+@function map-deep-get($_map, $_keys...) {
+    @each $_key in $_keys {
+        @if not map-has-key($_map, $_key) {
+            @warn "Key `#{$_key}` not found in map `#{$_map}`. Will return null";
+        }
+        $_map: map-get($_map, $_key);
+    }
+    @return $_map;
+}
+
+@function hero-setting($_key) {
+    @return map-get($global-hero-animation-settings, $_key);
+}

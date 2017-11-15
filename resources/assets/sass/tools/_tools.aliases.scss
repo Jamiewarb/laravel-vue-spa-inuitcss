@@ -1,0 +1,15 @@
+@mixin clearfix() {
+    @include inuit-clearfix();
+}
+
+@mixin font-size($inuit-font-size, $inuit-line-height: auto) {
+    @include inuit-font-size($inuit-font-size, $inuit-line-height);
+}
+
+@mixin hidden-visually() {
+    @include inuit-hidden-visually();
+}
+
+@mixin rem($property, $value) {
+    @include inuit-rem($property, $value);
+}

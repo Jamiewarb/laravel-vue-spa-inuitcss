@@ -1,9 +1,9 @@
 <template>
   <button :type="nativeType" :disabled="loading" class="btn" :class="{
-    [`btn-${type}`]: true,
-    'btn-block': block,
-    'btn-lg': large,
-    'btn-loading': loading
+    [`btn--${type}`]: true,
+    'btn--block': block,
+    'btn--large': large,
+    'btn--loading': loading
   }">
     <slot></slot>
   </button>
@@ -34,3 +34,29 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '~global-sass';
+
+.btn {
+    &--primary {
+
+    }
+    &--block {
+        display: block;
+    }
+    &--loading {
+
+    }
+
+    &--large {
+
+    }
+    &--medium {
+
+    }
+    &--small {
+
+    }
+}
+</style>

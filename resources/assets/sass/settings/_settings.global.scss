@@ -1,0 +1,133 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Standardise some UI treatments.
+// $global-radius: 2px !default; // Border radius
+// $global-transition-duration: 0.3s !default;
+// $global-transition-easing: cubic-bezier(.24,0,.06,1) !default;
+// $global-transition: all #{$global-transition-duration} #{$global-transition-easing};
+
+// $global-directions: top right bottom left;
+
+$global-spacing-huge: 70px;
+$global-spacing-large: 40px;
+$global-spacing-medium: 30px;
+$global-spacing-base: 20px;
+$global-spacing-small: 10px;
+$global-spacing-tiny: 5px;
+
+$inuit-global-font-size: 16px;
+$inuit-global-line-height: 21px;
+
+// Responsivity
+$mq-responsive: true;
+$mq-breakpoints: (
+    smallPalm:        22em,  // 352px
+    palm:             42em,  // 667px (iPhone 6)
+    device:           46em,  // 736px (iPhone 6 Plus)
+    desk:             64em,  // 1024px (iPad)
+    largeDesk:        75em,  // 1200px
+    widthDesk:        85em,  // 1360px
+    wide1920:         120em, // 1920px
+);
+
+$mq-show-breakpoints: ();
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width, e.g. (mobile, tablet, desktop).
+@if (inuit-config(env) == dev) {
+    $mq-show-breakpoints: (smallPalm, palm, device, desk, largeDesk, widthDesk, wide1920);
+}
+
+
+// --- Typography ---
+$font-family-header: 'Colfax-Regular';
+$font-family-content: 'Colfax-Regular';
+$font-family-content-bold: 'Colfax-Regular';
+
+// Sizes
+$font-size-huge: 72px;
+$font-size-large-alt: 52px;
+$font-size-large: 40px;
+$font-size-medium-alt: 36px;
+$font-size-medium: 33px;
+$font-size-base-alt: 18px;
+$font-size-base: 16px;
+$font-size-small-alt: 13px;
+$font-size-small: 12px;
+
+$font-line-height-base: 1.5;
+
+$list-font-sizes: ( // Used with the title and content mixins to generate .title and .content class styles
+    'huge': (
+        heading-level: '1',
+        size: $font-size-huge,
+        spacing: 14px
+    ),
+    'large': (
+        heading-level: '2',
+        size: $font-size-large-alt,
+        spacing: 10px
+    ),
+    'large-mobile': (
+        heading-level: 'null',
+        size: $font-size-large,
+        spacing: 10px
+    ),
+    'medium': (
+        heading-level: '3',
+        size: $font-size-medium-alt,
+        spacing: 10px
+    ),
+    'medium-mobile': (
+        heading-level: 'null',
+        size: $font-size-medium,
+        spacing: 10px
+    ),
+    'base': (
+        heading-level: '4',
+        size: $font-size-base-alt,
+        spacing: normal
+    ),
+    'base-alt': (
+        heading-level: 'null',
+        size: $font-size-base,
+        spacing: normal
+    ),
+    'small': (
+        heading-level: '5',
+        size: $font-size-small,
+        spacing: normal
+    ),
+    'small-alt': (
+        heading-level: 'null',
+        size: $font-size-small-alt,
+        spacing: normal
+    )
+);
+
+// --- Layering ---
+$global-z-index: (
+    aboveAll             : 100,
+    modal                : 65,
+    overlay              : 60,
+    error                : 50,
+
+    componentsForeground : 40,
+    navigation           : 30,
+    peekPages            : 25,
+    sidenav              : 24,
+    header               : 20,
+    footer               : 15,
+    componentsBackground : 10,
+
+    foreground           : 5,
+    button-group-hover   : 2,
+    base                 : 1,
+    background           : -1,
+    deepBackground       : -10,
+);
+

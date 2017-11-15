@@ -1,0 +1,52 @@
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin count-items($_count: count) {
+    &:first-child:nth-last-child(#{$_count}),
+    &:first-child:nth-last-child(#{$_count}) ~ & {
+        @content;
+    }
+}
+
+@mixin hover {
+    @include mq($from: device) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin h-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin object-fit() {
+    font-family: 'object-fit: contain;'; // For the object-fit shim for older browsers
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    &__container {
+        &--fallback {
+            background-size: cover;
+            display: block;
+        }
+    }
+}
+
+@mixin linear-gradient($top, $bottom){
+    background: $top;
+    background: linear-gradient(to bottom,  $top 0%, $bottom 100%);
+}

@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here, and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## v0.1.1 - 15th November 2017
+
+_Features:_
+
+* Incorporate skeleton inuit settings, tools and utilities
+
 ## v0.1.0 - 14th November 2017
 
 ### Initial Commit! :tada;

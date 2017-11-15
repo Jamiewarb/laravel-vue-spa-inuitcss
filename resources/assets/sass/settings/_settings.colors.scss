@@ -25,3 +25,18 @@ $color-text-dark: $color-black;
 // Theme Result
 $color-success: $color-green;
 $color-error: $color-red;
+
+
+// --- COLORS MAP ---
+// ONLY for Monotone + Theme colours, to make changing in future easier!!
+$map-core-colors: (
+    "primary": $color-primary,
+    "text-light": $color-text-light,
+    "text-dark": $color-text-dark,
+    "success": $color-success,
+    "error": $color-error,
+
+    "white": $color-white,
+    "grey-dark": $color-grey-dark,
+    "black": $color-black
+);

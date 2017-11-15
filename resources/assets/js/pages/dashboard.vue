@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    layout: 'default',
+    layout: 'dashboard',
 
     metaInfo () {
         return { title: this.$t('dashboard') }

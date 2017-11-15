@@ -5,6 +5,7 @@
 - Laravel 5.5 + Vue + Vue Router + Vuex
 - Pages with custom layouts
 - Login, register and password reset
+- Skeleton setup of [INUITCSS 6.0.0_beta5](https://github.com/inuitcss/inuitcss)
 - Integration with [vform](https://github.com/cretueusebiu/vform)
 - Authentication with [JWT](https://github.com/tymondesigns/jwt-auth)
 - Webpack with [laravel-mix](https://github.com/JeffreyWay/laravel-mix)

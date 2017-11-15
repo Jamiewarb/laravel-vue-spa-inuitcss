@@ -130,3 +130,7 @@ $inuit-offsets: true;
 @import "~inuitcss/utilities/utilities.responsive-spacings";
 @import "~inuitcss/utilities/utilities.print";
 @import "~inuitcss/utilities/utilities.hide";
+@import "./utilities/utilities.colors";
+@import "./utilities/utilities.helper";
+@import "./utilities/utilities.transitions";
+@import "./utilities/utilities.type";

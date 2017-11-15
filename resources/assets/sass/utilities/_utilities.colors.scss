@@ -1,0 +1,17 @@
+@each $_color, $_color-var in $map-core-colors {
+    .u-color {
+        &--#{$_color} {
+            color: $_color-var !important;
+        }
+    }
+    .u-bg-color {
+        &--#{$_color} {
+            background-color: $_color-var !important;
+        }
+    }
+    .u-fill {
+        &--#{$_color} {
+            fill: $_color-var !important;
+        }
+    }
+}

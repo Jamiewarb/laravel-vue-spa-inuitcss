@@ -1,5 +1,5 @@
 <template>
-    <div class="app-layout">
+    <div class="dashboard-layout">
         <navbar></navbar>
 
         <child/>
@@ -10,7 +10,7 @@
 import Navbar from '~/components/page/Navbar'
 
 export default {
-    name: 'app-layout',
+    name: 'dashboard-layout',
 
     components: {
         Navbar

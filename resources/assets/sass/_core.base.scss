@@ -25,3 +25,7 @@
 @import "~inuitcss/tools/tools.clearfix";
 @import "~inuitcss/tools/tools.hidden";
 @import "~sass-mq/mq";
+@import "./tools/tools.aliases";
+@import "./tools/tools.helpers";
+@import "./tools/tools.layout-functions";
+@import "./tools/tools.mixins";
