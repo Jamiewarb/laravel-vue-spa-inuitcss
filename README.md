@@ -45,3 +45,6 @@ yarn run production
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Credits
+Based heavily on [laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa) from cretueusebiu
