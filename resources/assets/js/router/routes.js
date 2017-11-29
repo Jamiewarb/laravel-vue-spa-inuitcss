@@ -19,7 +19,5 @@ export default ({ authGuard, guestGuard }) => [
     { path: '/password/reset/:token', name: 'password.reset', component: require('~/pages/auth/password/reset.vue') }
   ]),
 
-  { path: '/dashboard', name: 'dashboard', component: require('~/pages/dashboard.vue') },
-
   { path: '*', component: require('~/pages/errors/404.vue') }
 ]
