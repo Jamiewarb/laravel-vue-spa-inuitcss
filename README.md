@@ -14,7 +14,7 @@
 ## Installation
 
 - `git clone git@github.com:Jamiewarb/laravel-vue-spa-inuitcss`
-- `cd new-portal`
+- `cd laravel-vue-spa-inuitcss`
 - `cp .env.example .env`
 - `composer install`
 - `php artisan key:generate`
