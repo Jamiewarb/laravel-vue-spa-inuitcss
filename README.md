@@ -22,6 +22,7 @@
 - Edit `.env` and set your database connection details
 - `php artisan migrate`
 - `yarn install | npm install`
+- `cp node_modules/inuitcss/settings/_example.settings.config.scss resources/assets/sass/settings/_settings.config.scss`
 
 ## Usage
 
