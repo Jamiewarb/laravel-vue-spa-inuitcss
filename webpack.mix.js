@@ -10,12 +10,8 @@ mix
     .sass('resources/assets/sass/main.scss', 'public/css')
 
     .sourceMaps()
-    .disableNotifications()
-
-if (mix.inProduction()) {
-    mix.version()
-
-    mix.extract([
+    .version()
+    .extract([
         'vue',
         'vform',
         'axios',
@@ -29,15 +25,15 @@ if (mix.inProduction()) {
         'sweetalert2',
         'vuex-router-sync'
     ])
+
+if (mix.inProduction()) {
+
 }
 
 mix.webpackConfig({
     plugins: [
         // new BundleAnalyzerPlugin(),
         new webpack.ProvidePlugin({
-            // $: 'jquery',
-            // jQuery: 'jquery',
-            // 'window.jQuery': 'jquery',
             Popper: ['popper.js', 'default']
         })
     ],
