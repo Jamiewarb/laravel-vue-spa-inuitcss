@@ -1,8 +1,3 @@
-// Alignment helpers
-.u-text-center {
-    text-align: center;
-}
-
 // Style helpers
 .u-capitalize {
     text-transform: capitalize;
@@ -10,5 +5,37 @@
 
 // Weight helpers
 .u-bold {
-    font-family: $font-family-content-bold;
+    font-weight: 700;
+}
+
+.u-title {
+    font-family: $font-family-title;
+}
+
+.u-content {
+    font-family: $font-family-content;
+}
+
+// Alignment helpers
+.u-text {
+    &--center {
+        text-align: center;
+    }
+
+    @each $_sizing, $_text-map in $global-text-map {
+        $_responsive-map: map-get($_text-map, 'responsive');
+
+        &--#{$_sizing} {
+            @include text-styles($_text-map);
+            @if $_responsive-map {
+                &.u-text--responsive {
+                    @each $_breakpoint, $_responsive-text-map in $_responsive-map {
+                        @include mq($_breakpoint) {
+                            @include text-styles($_responsive-text-map);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

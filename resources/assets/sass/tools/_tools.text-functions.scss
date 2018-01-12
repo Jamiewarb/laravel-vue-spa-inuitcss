@@ -1,0 +1,33 @@
+// Use to unpack variables from the global font defaults map
+// e.g. letter-spacing: text-default('base', spacing);
+@function text-default($args...) {
+    @return map-deep-get($global-text-map, $args...);
+}
+
+@function text-size($size) {
+    @return text-default($size, 'size');
+}
+
+@function text-height($size) {
+    @return text-default($size, 'line-height');
+}
+
+@function text-spacing($size) {
+    @return text-default($size, 'spacing');
+}
+
+@mixin text-styles($text-map) {
+    $_size: map-get($text-map, 'size');
+    $_line-height: map-get($text-map, 'line-height');
+    $_letter-spacing: map-get($text-map, 'letter-spacing');
+    @if $_size and $_line-height {
+        @include font-size($_size, $_line-height);
+    } @else if $_size {
+        @include font-size($_size);
+    } @else if $_line_height {
+        line-height: $_line-height;
+    }
+    @if $_letter-spacing {
+        letter-spacing: $_letter-spacing;
+    }
+}

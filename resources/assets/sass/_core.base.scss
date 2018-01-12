@@ -18,6 +18,8 @@
 @import "~inuitcss/settings/settings.core";
 @import "./settings/settings.global";
 @import "./settings/settings.colors";
+@import "./settings/settings.transitions";
+@import "./settings/settings.type";
 
 
 // TOOLS
@@ -29,3 +31,5 @@
 @import "./tools/tools.helpers";
 @import "./tools/tools.layout-functions";
 @import "./tools/tools.mixins";
+@import "./tools/tools.text-functions";
+@import "./tools/tools.transitions";

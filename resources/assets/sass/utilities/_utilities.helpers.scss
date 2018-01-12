@@ -1,3 +1,10 @@
+.u-absolute {
+    position: absolute;
+}
+.u-relative {
+    position: relative;
+}
+
 .u-hide {
     display: none;
     @each $_breakpoint, $_screensize in $mq-breakpoints {

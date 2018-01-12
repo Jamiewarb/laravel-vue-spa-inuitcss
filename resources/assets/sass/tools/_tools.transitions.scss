@@ -1,0 +1,18 @@
+@function transition($key) {
+    @if map-has-key($global-predefined-transitions, $key) {
+        @return map-get($global-predefined-transitions, $key);
+    }
+
+    @warn "Unknown transition '#{$key}' in $global-predefined-transitions. Will return null";
+    @return null;
+}
+
+
+@function ease($key) {
+    @if map-has-key($global-easing, $key) {
+        @return map-get($global-easing, $key);
+    }
+
+    @warn "Unknown easing '#{$key}' in $global-easing. Will return null";
+    @return null;
+}

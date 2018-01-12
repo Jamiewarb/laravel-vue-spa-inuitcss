@@ -1,0 +1,56 @@
+// --- Typography ---
+$font-family-title: 'Colfax-Regular';
+$font-family-content: 'Colfax-Regular';
+
+// If we add .u-text--responsive to a .u-text--${size}, we will also add responsive
+// text sizing to it based on any responsive maps laid out below
+
+// ONLY access this map using the mixins in _tools.text-functions.scss
+// There are also helper classes for u-text in _utilities.type.scss
+$global-text-map: (
+    'huge': (
+        size: 55px,
+        line-height: 76px
+    ),
+    'large': (
+        size: 36px,
+        line-height: 54px,
+        responsive: (
+            device: (
+                size: 44px,
+                line-height: 64px
+            ),
+            desk: (
+                size: 48px,
+                line-height: 76px
+            ),
+            wide1920: (
+                size: 54px,
+                line-height: 76px
+            )
+        )
+    ),
+    'big': (
+        size: 30px
+    ),
+    'medium': (
+        size: 21px,
+        responsive: (
+            smallDevice: (
+                size: 24px
+            ),
+            desk: (
+                size: 26px
+            )
+        )
+    ),
+    'base': (
+        size: 16px
+    ),
+    'small': (
+        size: 12px
+    ),
+    'tiny': (
+        size: 11px
+    )
+);
